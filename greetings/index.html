@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday [Sister's Name]!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <!-- Confetti Animation -->
+    <div id="confetti-container"></div>
+
+        <!-- Countdown Timer -->
+        <section id="countdown">
+            <h2>Countdown to Your Special Day!</h2>
+            <div id="countdown-timer"></div>
+        </section>
+        
+    <!-- Memory Lane -->
+    <section id="memory-lane">
+        <h2>Memory Lane</h2>
+        <div class="memory-item">
+            <img src="images/photo1.jpg" alt="Memory Photo 1">
+            <p>Memory description here...</p>
+        </div>
+    </section>
+
+    <!-- Video Display -->
+    <section id="video-display">
+        <h2>The most beautiful memory in college life</h2>
+        <div class="video-container">
+            <video controls>
+                <source src="video/memories.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    
+    <!-- Voice Notes -->
+    <section id="voice-notes">
+        <h2>Voice Messages</h2>
+        <audio controls>
+            <source src="audio/voice-note.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
+
+    <!-- Quiz -->
+    <section id="quiz">
+        <h2>Fun Quiz!</h2>
+        <form id="quiz-form">
+            <label for="q1">Question 1: What is [Sister's Name]'s favorite color?</label>
+            <input type="text" id="q1" name="q1">
+            <button type="button" onclick="submitQuiz()">Submit</button>
+        </form>
+        <div id="quiz-result"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
