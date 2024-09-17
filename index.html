@@ -232,28 +232,29 @@ body {
     };
 
     // Add event listeners
-    document.addEventListener("DOMContentLoaded", () => {
-      const replayBtn = document.getElementById("replay");
-      const openGiftBtn = document.getElementById("open-gift");
+document.addEventListener("DOMContentLoaded", () => {
+  const replayBtn = document.getElementById("replay");
+  const openGiftBtn = document.getElementById("open-gift");
 
-      if (replayBtn) {
-        replayBtn.addEventListener("click", () => {
-          gsap.globalTimeline.restart(); // Ensure globalTimeline is properly handled
-        });
-      }
-
-      if (openGiftBtn) {
-        openGiftBtn.addEventListener("click", () => {
-          // Trigger confetti animation
-          runConfetti();
-
-          // Navigate to another page after confetti animation
-          setTimeout(() => {
-            window.location.href = 'https://nithish-yadav-31.github.io/HappyBirthdayVarshu/greetings.html'; // Replace with your target URL
-          }, 3000); // Adjust delay if necessary
-        });
-      }
+  if (replayBtn) {
+    replayBtn.addEventListener("click", () => {
+      gsap.globalTimeline.restart(); // Ensure globalTimeline is properly handled
     });
+  }
+
+  if (openGiftBtn) {
+    openGiftBtn.addEventListener("click", () => {
+      // Trigger confetti animation
+      runConfetti();
+
+      // Navigate to another page after confetti animation
+      setTimeout(() => {
+        window.location.href = 'https://nithish-yadav-31.github.io/HappyBirthdayVarshu/greetings.html'; // Replace with your target URL
+      }, 3000); // Adjust delay if necessary
+    });
+  }
+});
+
 
     // Fetch data and run animation in sequence
     const fetchData = () => {
