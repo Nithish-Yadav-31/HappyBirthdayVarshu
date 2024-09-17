@@ -233,23 +233,19 @@ body {
 
     // Add event listeners
 document.addEventListener("DOMContentLoaded", () => {
-  const replayBtn = document.getElementById("replay");
   const openGiftBtn = document.getElementById("open-gift");
-
-  if (replayBtn) {
-    replayBtn.addEventListener("click", () => {
-      gsap.globalTimeline.restart(); // Ensure globalTimeline is properly handled
-    });
-  }
 
   if (openGiftBtn) {
     openGiftBtn.addEventListener("click", () => {
       // Trigger confetti animation
       runConfetti();
 
-      // Navigate to another page after confetti animation
+      // Log URL to ensure it's correct
+      console.log("Navigating to:", 'https://nithish-yadav-31.github.io/HappyBirthdayVarshu/greetings.html');
+
+      // Navigate to the updated URL after confetti animation
       setTimeout(() => {
-        window.location.href = 'https://nithish-yadav-31.github.io/HappyBirthdayVarshu/greetings.html'; // Replace with your target URL
+        window.location.href = 'https://nithish-yadav-31.github.io/HappyBirthdayVarshu/greetings.html';
       }, 3000); // Adjust delay if necessary
     });
   }
