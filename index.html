@@ -233,7 +233,13 @@ body {
 
     // Add event listeners
 document.addEventListener("DOMContentLoaded", () => {
+  const replayBtn = document.getElementById("replay");
   const openGiftBtn = document.getElementById("open-gift");
+  if (replayBtn) {
+    replayBtn.addEventListener("click", () => {
+      gsap.globalTimeline.restart(); // Ensure globalTimeline is properly handled
+    });
+  }
 
   if (openGiftBtn) {
     openGiftBtn.addEventListener("click", () => {
