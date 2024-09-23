@@ -1,7 +1,7 @@
 'use strict';
 
 // Countdown Timer
-const countdownDate = new Date("2024-09-23T20:45:00").getTime();
+const countdownDate = new Date("2024-09-24T11:11:00").getTime();
 const countdownElement = document.getElementById("countdown-timer");
 
 // Initialize fireworks flag and repetition count
