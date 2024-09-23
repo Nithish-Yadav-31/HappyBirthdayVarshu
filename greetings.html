@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Varshuuu!</title>
+    <title>Happy Birthday [Sister's Name]!</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,14 +20,7 @@
             <div id="countdown-timer"></div>
         </section>
         
-    <!-- Memory Lane -->
-    <section id="memory-lane">
-        <h2>Memory Lane</h2>
-        <div class="memory-item">
-            <img src="images/photo1.jpg" alt="Memory Photo 1">
-            <p>Memory description here...</p>
-        </div>
-    </section>
+
 
     <!-- Video Display -->
     <section id="video-display">
@@ -44,11 +37,13 @@
     <!-- Voice Notes -->
     <section id="voice-notes">
         <h2>Voice Messages</h2>
-        <audio controls>
-            <source src="audio/voice-note.mp3" type="audio/mpeg">
+        <audio id="voice-note" controls>
+            <source src="video/varshu.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
+        <button onclick="playAudio()">Play Message</button>
     </section>
+    
 
     <!-- Quiz -->
     <section id="quiz">

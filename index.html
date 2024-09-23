@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Birthday Thangachi</title>
+  <title>Animated Birthday Message</title>
   <!-- Preconnect and Font Link -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
   <style>
-    /* Basic styling for the demo */
 /* Basic styling for the demo */
 body {
   font-family: 'Cormorant', serif;
@@ -232,31 +231,28 @@ body {
     };
 
     // Add event listeners
-document.addEventListener("DOMContentLoaded", () => {
-  const replayBtn = document.getElementById("replay");
-  const openGiftBtn = document.getElementById("open-gift");
-  if (replayBtn) {
-    replayBtn.addEventListener("click", () => {
-      gsap.globalTimeline.restart(); // Ensure globalTimeline is properly handled
+    document.addEventListener("DOMContentLoaded", () => {
+      const replayBtn = document.getElementById("replay");
+      const openGiftBtn = document.getElementById("open-gift");
+
+      if (replayBtn) {
+        replayBtn.addEventListener("click", () => {
+          gsap.globalTimeline.restart(); // Ensure globalTimeline is properly handled
+        });
+      }
+
+      if (openGiftBtn) {
+        openGiftBtn.addEventListener("click", () => {
+          // Trigger confetti animation
+          runConfetti();
+
+          // Navigate to another page after confetti animation
+          setTimeout(() => {
+            window.location.href = 'greetings.html'; // Replace with your target URL
+          }, 3000); // Adjust delay if necessary
+        });
+      }
     });
-  }
-
-  if (openGiftBtn) {
-    openGiftBtn.addEventListener("click", () => {
-      // Trigger confetti animation
-      runConfetti();
-
-      // Log URL to ensure it's correct
-      console.log("Navigating to:", 'https://nithish-yadav-31.github.io/HappyBirthdayVarshu/greetings.html');
-
-      // Navigate to the updated URL after confetti animation
-      setTimeout(() => {
-        window.location.href = 'https://nithish-yadav-31.github.io/HappyBirthdayVarshu/greetings.html';
-      }, 3000); // Adjust delay if necessary
-    });
-  }
-});
-
 
     // Fetch data and run animation in sequence
     const fetchData = () => {
