@@ -49,9 +49,19 @@ video, audio {
     display: block;
 }
 
+#countdown {
+    padding: 4em; /* Increase padding for more space */
+    margin: 2em auto; /* Increase margin for spacing */
+    background: #fff; /* Ensure background is white for contrast */
+    border-radius: 8px; /* Match the rounded corners */
+    max-width: 90%; /* Limit max width for responsiveness */
+    text-align: center; /* Center align content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add subtle shadow for depth */
+}
+
 /* Countdown timer styling */
 #countdown-timer {
-    font-size: 2em;
+    font-size: 2em; /* Default font size */
     font-weight: bold;
     text-align: center;
 }
@@ -107,37 +117,27 @@ video, audio {
         padding: 0.4em;
     }
 }
-
-/* Styles for screens between 769px and 1200px */
-@media (min-width: 769px) and (max-width: 1200px) {
-    section {
-        padding: 2em;
-        margin: 1em auto;
-        max-width: 90%; /* Limit max width for larger screens */
+/* Styles for screens larger than 1200px */
+@media (min-width: 1201px) {
+    #countdown {
+        padding: 20em; /* Increase padding for larger screens */
+        margin: 2.5em auto; /* Adjust margin for larger screens */
+        max-width: 90%; /* Increase max width for larger screens */
     }
 
     #countdown-timer {
-        font-size: 1.8em;
-    }
-
-    #quiz-form input {
-        padding: 0.5em;
+        font-size: 8em; /* Increase font size for larger screens */
     }
 }
 
-/* Styles for screens larger than 1200px */
-@media (min-width: 1201px) {
-    section {
-        padding: 2em;
-        margin: 1.5em auto;
-        max-width: 80%; /* Increase max width for larger screens */
+/* Styles for screens between 769px and 1200px */
+@media (min-width: 769px) and (max-width: 1200px) {
+    #countdown {
+        padding: 4em; /* Maintain padding for medium screens */
+        margin: 2em auto; /* Maintain margin for medium screens */
     }
 
     #countdown-timer {
-        font-size: 2em;
-    }
-
-    #quiz-form input {
-        padding: 0.6em;
+        font-size: 2.5em; /* Slightly increase font size for medium screens */
     }
 }

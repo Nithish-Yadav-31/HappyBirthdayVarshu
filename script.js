@@ -1,7 +1,7 @@
 'use strict';
 
 // Countdown Timer
-const countdownDate = new Date("2024-09-17T01:16:00").getTime();
+const countdownDate = new Date("2024-09-23T20:45:00").getTime();
 const countdownElement = document.getElementById("countdown-timer");
 
 // Initialize fireworks flag and repetition count
@@ -19,7 +19,7 @@ function triggerCelebrations() {
                 spread: 70,
                 origin: { x: Math.random(), y: Math.random() }
             });
-        }, i * 500); // Burst every 500ms
+        }, i * 800); // Burst every 500ms
     }
 
     // Trigger Fireworks
@@ -44,18 +44,23 @@ const countdownFunction = setInterval(function() {
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     // Display countdown
-    countdownElement.innerHTML =
-        `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
 
     // When the countdown is finished
     if (distance < 0) {
         clearInterval(countdownFunction);
         countdownElement.innerHTML = "EXPIRED";
 
-        // Trigger celebrations
-        triggerCelebrations();
+        // Trigger celebrations and initialize fireworks
+        if (!fireworksInitialized) { // Check if fireworks are already initialized
+            triggerCelebrations();
+            initializeFireworks(); // Ensure fireworks start fresh
+            current = 0; // Reset to start from "HAPPY"
+            fireworksInitialized = true; // Mark as initialized
+        }
     }
 }, 1000);
+
 
 // Function to trigger Blue Confetti
 function triggerBlueConfetti() {
@@ -379,4 +384,12 @@ function initializeFireworks() {
         }
     }
     animateFireworks();
+}
+
+
+function playAudio() {
+    const audio = document.getElementById('voice-note');
+    audio.play().catch(error => {
+        console.error("Error playing audio:", error);
+    });
 }
